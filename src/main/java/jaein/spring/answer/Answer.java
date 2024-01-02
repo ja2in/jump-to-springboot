@@ -1,5 +1,6 @@
-package jaein.spring.entity;
+package jaein.spring.answer;
 
+import jaein.spring.question.Question;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
