@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--<html lang="en" xmlns:th="http://www.thymeleaf.org">-->
+<html layout:decorate="~{layout}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<!--<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">-->
 
-<link rel="stylesheet" type="text/css" th:href="@{/bootstrap.min.css}">
-<div class="container my-3">
+<div layout:fragment="content" class="container">
     <h5 class="my-3 border-bottom pb-2">질문 등록</h5>
     <form th:action="@{/question/create}" th:object="${questionForm}" method="post">
 <!--        <div class="alert alert-danger" role="alert" th:if="${#fields.hasAnyErrors()}">-->
@@ -20,5 +21,6 @@
         </div>
         <input type="submit" value="저장하기" class="btn btn-primary my-2">
     </form>
+
 </div>
 </html>
