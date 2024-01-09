@@ -2,6 +2,7 @@ package jaein.spring.repository;
 
 import jaein.spring.question.Question;
 import jaein.spring.question.QuestionRepository;
+import jaein.spring.question.QuestionService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -16,6 +17,9 @@ class QuestionRepositoryTest {
 
     @Autowired
     private QuestionRepository questionRepository;
+
+    @Autowired
+    private QuestionService questionService;
 
     @Test
     public void saveTest() throws Exception {
@@ -87,5 +91,14 @@ class QuestionRepositoryTest {
         Question q = oq.get();
         this.questionRepository.delete(q);
         assertEquals(1, this.questionRepository.count());
+    }
+
+    @Test
+    public void pageTest() throws Exception{
+        for(int i = 1; i <= 300; i++){
+            String subject = String.format("테스트 데이터입니다:[%03d]", i);
+            String content = "내용 없음";
+            this.questionService.create(subject, content);
+        }
     }
 }
