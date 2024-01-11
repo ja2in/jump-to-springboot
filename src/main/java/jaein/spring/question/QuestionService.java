@@ -1,6 +1,6 @@
 package jaein.spring.question;
 
-import jaein.spring.DataNotFoundException;
+import jaein.spring.exception.DataNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
