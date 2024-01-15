@@ -6,3 +6,4 @@
 * SpringBoot 3.2.1
 * H2 Database
 * Thymeleaf
+* Spring security
