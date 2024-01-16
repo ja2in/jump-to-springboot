@@ -1,6 +1,7 @@
 package jaein.spring.answer;
 
 import jaein.spring.question.Question;
+import jaein.spring.user.SiteUser;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,5 +23,6 @@ public class Answer {
 
     private LocalDateTime createDate;
 
-
+    @ManyToOne
+    private SiteUser author;
 }
