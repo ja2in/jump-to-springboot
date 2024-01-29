@@ -7,3 +7,5 @@
 * H2 Database
 * Thymeleaf
 * Spring security
+* AWS
+* FileZila
